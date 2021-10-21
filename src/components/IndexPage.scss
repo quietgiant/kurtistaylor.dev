@@ -1,0 +1,58 @@
+@use "sass:math";
+
+.index-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media only screen and (min-width: 800px) {
+        justify-content: center;
+
+        .title {
+            line-height: 3.5;
+        }
+    }
+
+    $offset: -1.5rem;
+    $count: 50;
+    $duration: 1.5;
+
+    @keyframes wave {
+        from {
+            transform: translateY(0);
+            color: rgb(157, 232, 255);
+        }
+
+        to {
+            transform: translateY($offset);
+        }
+    }
+
+    .wavetext span {
+        display: inline-block;
+        font-family: "Fredoka One", sans-serif;
+        font-size: 3.5rem;
+        animation-duration: #{$duration}s;
+        animation-name: wave;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @for $i from 0 to $count {
+        .wavetext :nth-child( #{$count}n + #{$i} ) {
+            animation-delay: -#{math.div($count - $i * 2 * $duration, $count)}s;
+            color: rgba(200+$i * 10 % 150, 20, 50+$i * 10 % 150, 0.8);
+        }
+    }
+
+    .icon-links {
+        width: unset;
+
+        svg {
+            font-size: 3rem;
+            margin: 0rem 0.7rem;
+        }
+    }
+}
