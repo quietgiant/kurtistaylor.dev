@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.scss';
-import KtAppBar from './KtAppBar';
 import IndexPage from './components/IndexPage';
 import AboutPage from './components/AboutPage';
 import {
