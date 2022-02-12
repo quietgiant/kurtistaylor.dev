@@ -16,7 +16,7 @@
     }
 
     $offset: -1.5rem;
-    $count: 50;
+    $count: 70;
     $duration: 1.5;
 
     @keyframes wave {
@@ -43,7 +43,7 @@
     @for $i from 0 to $count {
         .wavetext :nth-child( #{$count}n + #{$i} ) {
             animation-delay: -#{math.div($count - $i * 2 * $duration, $count)}s;
-            color: rgba(200+$i * 10 % 150, 20, 50+$i * 10 % 150, 0.8);
+            color: rgba($i * 10 % 180, $i * 10 % 200, 50 + $i * 10 % 200, 0.7);
         }
     }
 
