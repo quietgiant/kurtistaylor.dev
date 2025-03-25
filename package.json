@@ -2,6 +2,15 @@
   "name": "kurtistaylor.dev",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "npm-run-all -p watch:css start:js",
+    "build:css": "sass src:public/res/css -c",
+    "watch:css": "yarn run build:css && sass src:public/res/css -w -c",
+    "start:js": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
@@ -38,15 +47,6 @@
     "workbox-strategies": "^5.1.3",
     "workbox-streams": "^5.1.3",
     "yarn-run-all": "^3.1.1"
-  },
-  "scripts": {
-    "build:css": "sass src:public/res/css -c",
-    "watch:css": "yarn run build:css && sass src:public/res/css -w -c",
-    "start:js": "react-scripts start",
-    "start": "npm-run-all -p watch:css start:js",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
