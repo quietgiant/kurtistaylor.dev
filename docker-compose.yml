@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   web:
     build:
@@ -7,12 +5,3 @@ services:
       dockerfile: Dockerfile
     container_name: kurtistaylor-web
     restart: unless-stopped
-    networks:
-      - caddy_net
-    labels:
-      caddy: kurtistaylor.dev
-      caddy.reverse_proxy: "{{upstreams 7777}}"
-
-networks:
-  caddy_net:
-    external: true 
