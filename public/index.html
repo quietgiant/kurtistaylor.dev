@@ -1,41 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Kurtis Taylor, Engineer" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet" />
-    <title>Kurtis Taylor, Engineer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurtis Taylor - Home</title>
+    <link href="/styles.css" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico">
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <body class="bg-gray-50">
+    <nav class="bg-white shadow-md fixed bottom-0 left-0 right-0 md:top-0 md:bottom-auto">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-around items-center h-16">
+          <a href="/" class="nav-link flex flex-col items-center">
+            <i data-feather="user"></i>
+            <span class="text-sm">Home</span>
+          </a>
+          <a href="/trading.html" class="nav-link flex flex-col items-center">
+            <i data-feather="trending-up"></i>
+            <span class="text-sm">Trading</span>
+          </a>
+          <a href="/projects.html" class="nav-link flex flex-col items-center">
+            <i data-feather="code"></i>
+            <span class="text-sm">Projects</span>
+          </a>
+        </div>
+      </div>
+    </nav>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <main class="index-page pb-20 md:pb-0">
+      <div class="max-w-4xl mx-auto text-center">
+        <img src="/res/img/kurt.jpg" alt="Kurtis Taylor" class="profile-image" />
+        <div class="wavetext mb-12">
+          <span>K</span><span>u</span><span>r</span><span>t</span><span>i</span><span>s</span>
+          <span> </span>
+          <span>T</span><span>a</span><span>y</span><span>l</span><span>o</span><span>r</span>
+        </div>
+        <p class="text-xl text-gray-600 mb-12">Software Developer</p>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="card">
+            <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+            <p class="text-gray-700">
+              I'm a passionate software developer with experience in full-stack development,
+              trading systems, and various programming languages.
+            </p>
+          </div>
+
+          <div class="card">
+            <h2 class="text-2xl font-semibold mb-4">Skills</h2>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Full-stack Development</li>
+              <li>• Trading Systems</li>
+              <li>• Problem Solving</li>
+              <li>• Technical Analysis</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="icon-links mt-12">
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-primary">
+            <i data-feather="github"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-primary">
+            <i data-feather="linkedin"></i>
+          </a>
+          <a href="mailto:your.email@example.com" class="text-gray-700 hover:text-primary">
+            <i data-feather="mail"></i>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
