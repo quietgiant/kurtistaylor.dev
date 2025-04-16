@@ -15,8 +15,28 @@
     @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200;
   }
 
-  .profile-image {
-    @apply w-48 h-48 rounded-full shadow-lg mx-auto mb-8 object-cover border-4 border-white;
+  .logo {
+    @apply w-64 h-64 rounded-full bg-gray-300 mx-auto mb-12 flex items-center justify-center;
+  }
+
+  .logo span {
+    @apply text-white text-6xl font-light;
+  }
+
+  .greeting {
+    @apply text-5xl text-gray-600 mb-16 font-light;
+  }
+
+  .social-icons {
+    @apply flex justify-center gap-8 mt-16;
+  }
+
+  .social-icons a {
+    @apply transition-opacity hover:opacity-75;
+  }
+
+  .social-icons img {
+    @apply w-12 h-12;
   }
 }
 

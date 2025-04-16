@@ -668,21 +668,57 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.profile-image {
+.logo {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2rem;
-  height: 12rem;
-  width: 12rem;
+  margin-bottom: 3rem;
+  display: flex;
+  height: 16rem;
+  width: 16rem;
+  align-items: center;
+  justify-content: center;
   border-radius: 9999px;
-  border-width: 4px;
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-  -o-object-fit: cover;
-     object-fit: cover;
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+}
+
+.logo span {
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 300;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.greeting {
+  margin-bottom: 4rem;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 300;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+
+.social-icons {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-icons a {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.social-icons a:hover {
+  opacity: 0.75;
+}
+
+.social-icons img {
+  height: 3rem;
+  width: 3rem;
 }
 
 .fixed {
@@ -714,10 +750,6 @@ video {
   margin-bottom: 1rem;
 }
 
-.mt-12 {
-  margin-top: 3rem;
-}
-
 .flex {
   display: flex;
 }
@@ -728,6 +760,10 @@ video {
 
 .h-16 {
   height: 4rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .max-w-4xl {
@@ -744,6 +780,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-around {
@@ -960,11 +1000,6 @@ video {
   margin-right: 0.75rem;
   font-size: 3rem;
   line-height: 1;
-}
-
-.hover\:text-primary:hover {
-  --tw-text-opacity: 1;
-  color: rgb(25 118 210 / var(--tw-text-opacity, 1));
 }
 
 @media (min-width: 768px) {
