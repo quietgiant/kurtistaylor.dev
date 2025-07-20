@@ -5,11 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kurtis Taylor</title>
     <link rel="icon" type="image/x-icon" href="res/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes wave {
+            from {
+                transform: translateY(0);
+                color: #9de8ff;
+            }
+            to {
+                transform: translateY(-1.5rem);
+            }
+        }
+        
+        .wavetext span {
+            display: inline-block;
+            font-family: "Lato", sans-serif;
+            font-size: 3.5rem;
+            font-weight: bold;
+            animation-duration: 1.5s;
+            animation-name: wave;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        .wavetext :nth-child(70n+0) { animation-delay: -1s; color: rgba(0, 0, 50, 0.7); }
+        .wavetext :nth-child(70n+1) { animation-delay: -0.9571428571s; color: rgba(10, 10, 60, 0.7); }
+        .wavetext :nth-child(70n+2) { animation-delay: -0.9142857143s; color: rgba(20, 20, 70, 0.7); }
+        .wavetext :nth-child(70n+3) { animation-delay: -0.8714285714s; color: rgba(30, 30, 80, 0.7); }
+        .wavetext :nth-child(70n+4) { animation-delay: -0.8285714286s; color: rgba(40, 40, 90, 0.7); }
+        .wavetext :nth-child(70n+5) { animation-delay: -0.7857142857s; color: rgba(50, 50, 100, 0.7); }
+        .wavetext :nth-child(70n+6) { animation-delay: -0.7428571429s; color: rgba(60, 60, 110, 0.7); }
+        .wavetext :nth-child(70n+7) { animation-delay: -0.7s; color: rgba(70, 70, 120, 0.7); }
+        .wavetext :nth-child(70n+8) { animation-delay: -0.6571428571s; color: rgba(80, 80, 130, 0.7); }
+        .wavetext :nth-child(70n+9) { animation-delay: -0.6142857143s; color: rgba(90, 90, 140, 0.7); }
+        .wavetext :nth-child(70n+10) { animation-delay: -0.5714285714s; color: rgba(100, 100, 150, 0.7); }
+        .wavetext :nth-child(70n+11) { animation-delay: -0.5285714286s; color: rgba(110, 110, 160, 0.7); }
+        .wavetext :nth-child(70n+12) { animation-delay: -0.4857142857s; color: rgba(120, 120, 170, 0.7); }
+        .wavetext :nth-child(70n+13) { animation-delay: -0.4428571429s; color: rgba(130, 130, 180, 0.7); }
+        .wavetext :nth-child(70n+14) { animation-delay: -0.4s; color: rgba(140, 140, 190, 0.7); }
+        .wavetext :nth-child(70n+15) { animation-delay: -0.3571428571s; color: rgba(150, 150, 200, 0.7); }
+        .wavetext :nth-child(70n+16) { animation-delay: -0.3142857143s; color: rgba(160, 160, 210, 0.7); }
+        .wavetext :nth-child(70n+17) { animation-delay: -0.2714285714s; color: rgba(170, 170, 220, 0.7); }
+        .wavetext :nth-child(70n+18) { animation-delay: -0.2285714286s; color: rgba(0, 180, 230, 0.7); }
+        .wavetext :nth-child(70n+19) { animation-delay: -0.1857142857s; color: rgba(10, 190, 240, 0.7); }
+    </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
+<body class="bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 min-h-screen font-sans">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm border-b border-gray-200">
+    <nav class="bg-white/80 backdrop-blur-sm shadow-sm border-b border-gray-200">
         <div class="max-w-4xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <a href="index.html" class="text-xl font-semibold text-gray-900 hover:text-gray-700 transition-colors">KT</a>
@@ -30,7 +87,9 @@
             </div>
 
             <!-- Name and Title -->
-            <h2 class="text-5xl font-bold text-gray-900 mb-8">Hi, I'm Kurt</h2>
+            <h2 class="wavetext mb-8">
+                <span>H</span><span>i</span><span>,</span><span>&nbsp;</span><span>I</span><span>'</span><span>m</span><span>&nbsp;</span><span>K</span><span>u</span><span>r</span><span>t</span>
+            </h2>
 
             <!-- Social Links -->
             <div class="flex justify-center space-x-12 mb-16">
