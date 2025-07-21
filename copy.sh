@@ -1,0 +1,1 @@
+sudo cp *.html /var/www/kurtistaylordev/ && sudo cp -r res/ /var/www/kurtistaylordev/res/ && echo "Successfully copied files 🚀"
